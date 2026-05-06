@@ -48,12 +48,19 @@ export default function Home() {
 
   const selectAllVisible = (visibleIds) => {
     setSelected((prev) => {
-      const all = visibleIds.every((id) => prev.has(id));
+      const capped = visibleIds.slice(0, 30);
+      const allCappedSelected = capped.every((id) => prev.has(id));
       const next = new Set(prev);
-      if (all) visibleIds.forEach((id) => next.delete(id));
-      else visibleIds.forEach((id) => next.add(id));
+      if (allCappedSelected) {
+        capped.forEach((id) => next.delete(id));
+      } else {
+        capped.forEach((id) => next.add(id));
+      }
       return next;
     });
+    if (visibleIds.length > 30) {
+      toast.info("Selected first 30 items (ZIP limit per request)");
+    }
   };
 
   const downloadBulk = async () => {

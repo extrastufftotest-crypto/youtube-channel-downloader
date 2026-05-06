@@ -1,0 +1,110 @@
+{
+  "theme": "Light",
+  "archetype": "Archetype 4 (Swiss & High-Contrast)",
+  "emotional_tone": "Precise, Authoritative, Effortless, Technical",
+  "colors": {
+    "background": "#F2F2F2",
+    "surface": "#FFFFFF",
+    "primary": "#E63946",
+    "secondary": "#002FA7",
+    "text_main": "#0A0A0A",
+    "text_muted": "#555555",
+    "border": "rgba(10, 10, 10, 0.15)",
+    "border_hard": "#0A0A0A",
+    "success": "#008A00",
+    "error": "#E63946",
+    "warning": "#FFB800"
+  },
+  "typography": {
+    "font_families": {
+      "headings": "Chivo, sans-serif",
+      "body": "IBM Plex Sans, sans-serif",
+      "mono": "IBM Plex Mono, monospace"
+    },
+    "rules": {
+      "h1": "text-4xl sm:text-5xl font-black tracking-tighter leading-none text-[#0A0A0A]",
+      "h2": "text-2xl sm:text-3xl font-bold tracking-tight leading-tight text-[#0A0A0A]",
+      "h3": "text-xl sm:text-2xl font-bold tracking-tight text-[#0A0A0A]",
+      "body": "text-base font-normal leading-relaxed text-[#0A0A0A]",
+      "small_labels": "text-xs font-semibold uppercase tracking-[0.2em] text-[#555555]",
+      "data_numbers": "font-mono text-sm tracking-tight"
+    },
+    "imports": [
+      "@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');"
+    ]
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing + Technical Grids. Ensure high density for data, but ample padding around containers.",
+    "container_padding": "p-8 md:p-12",
+    "bento_grid": "Grid Borders strategy. Use sharp, visible grid lines.",
+    "border_radius": "rounded-none",
+    "shadows": "None. Use 1px solid borders for visual hierarchy instead of shadows."
+  },
+  "surface_strategies": {
+    "main_container": "Solid background (#F2F2F2).",
+    "cards_and_tables": "Solid white (#FFFFFF) with 1px border (#0A0A0A at 15% opacity). No rounded corners.",
+    "grid_borders": "Apply 'border-r border-b border-black/15' to grid items to expose the skeleton and create a technical spreadsheet vibe.",
+    "header": "Solid white background with a hard 1px bottom border. No glassmorphism."
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#E63946] text-white rounded-none font-bold uppercase tracking-wider px-6 py-3 hover:bg-[#0A0A0A] hover:text-white transition-colors duration-200 border border-[#E63946] hover:border-[#0A0A0A]",
+      "secondary": "bg-transparent text-[#0A0A0A] border border-[#0A0A0A] rounded-none font-bold uppercase tracking-wider px-6 py-3 hover:bg-[#002FA7] hover:text-white hover:border-[#002FA7] transition-colors duration-200",
+      "ghost": "bg-transparent text-[#555555] hover:text-[#0A0A0A] rounded-none px-4 py-2"
+    },
+    "inputs": {
+      "text_field": "bg-white border border-black/20 rounded-none px-4 py-3 text-[#0A0A0A] focus:border-[#002FA7] focus:ring-1 focus:ring-[#002FA7] focus:outline-none placeholder-black/40",
+      "search": "Same as text field but with a stark search icon on the left."
+    },
+    "tables": {
+      "wrapper": "border border-black/15 rounded-none bg-white overflow-hidden",
+      "header_row": "bg-[#F2F2F2] border-b border-black/15 text-xs font-semibold uppercase tracking-[0.2em] text-[#555555]",
+      "row": "border-b border-black/10 hover:bg-black/5 transition-colors text-sm",
+      "cell_padding": "p-4"
+    },
+    "cards_video": {
+      "wrapper": "flex flex-col border border-black/15 bg-white relative group",
+      "thumbnail": "aspect-video bg-black/5 w-full object-cover border-b border-black/15 grayscale-[20%] group-hover:grayscale-0 transition-all",
+      "content": "p-4 flex flex-col flex-grow",
+      "title": "font-bold text-base leading-snug line-clamp-2 mb-2",
+      "meta": "font-mono text-xs text-[#555555] mb-4 flex gap-2 flex-wrap"
+    },
+    "progress_indicators": {
+      "loading_bar": "h-1 w-full bg-black/10 overflow-hidden",
+      "loading_fill": "h-full bg-[#002FA7] transition-all duration-300",
+      "spinner": "border-2 border-black/20 border-t-[#002FA7] rounded-full w-6 h-6 animate-spin"
+    },
+    "badges": {
+      "hashtag": "bg-[#F2F2F2] border border-black/10 text-[#555555] text-xs px-2 py-1 font-mono rounded-none"
+    }
+  },
+  "motion": {
+    "philosophy": "Functional and instant. No slow fades. High-contrast state changes.",
+    "hover_states": "Hard color swaps (e.g., Red to Black). No soft transparency fades.",
+    "transitions": "transition-colors duration-150 ease-in-out"
+  },
+  "icons": {
+    "library": "lucide-react",
+    "style": "Use stroke-width 2. Functional, sharp, and consistent.",
+    "size": "w-5 h-5 for inline, w-8 h-8 for empty states."
+  },
+  "media": {
+    "image_urls": [
+      {
+        "category": "empty_state_hero",
+        "url": "https://images.unsplash.com/photo-1649783467344-4dfdb3b55036?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGdlb21ldHJpYyUyMG1pbmltYWwlMjBsYXlvdXR8ZW58MHx8fHwxNzc4MTAxNTEwfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract wave design in warm colors, used for the hero/empty state banner background when no channel is loaded. Apply grayscale and high contrast overlay."
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "1. HYBRID/FULLSTACK BUILD: This is a downloader utility. Prioritize a pristine, high-contrast Swiss Brutalism UI design.",
+    "2. OVERRIDES: Strip all border-radius from Shadcn components. Use `rounded-none`. Replace soft shadows with hard 1px borders (`border-black/15`).",
+    "3. FONTS: Import and configure 'Chivo' for headings and 'IBM Plex Sans' for body text in tailwind.config.js.",
+    "4. ACCESSIBILITY: Every interactive element MUST have a `data-testid` attribute (e.g., `data-testid=\"download-single-btn\"`).",
+    "5. LAYOUT: For the video list, you can choose a high-density Data Table OR a rigid Grid (Bento) of cards. Both must adhere to the 1px sharp border rule.",
+    "6. HOVER STATES: Ensure hover states explicitly change the text color and background to maintain APCA contrast (e.g., hover:bg-black hover:text-white).",
+    "7. EMPTY STATE: Use the provided `empty_state_hero` image as a striking hero background before a user inputs a channel URL. Overlay it with a white/grey tint (`bg-white/80` or `bg-[#F2F2F2]/90`) so text is legible.",
+    "8. API/BACKEND: Ensure the backend handles fetching YouTube videos, extracting Shorts, parsing hashtags, downloading single/bulk (ZIP), and reporting progress."
+  ]
+}
